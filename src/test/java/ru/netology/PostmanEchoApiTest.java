@@ -10,17 +10,18 @@ public class PostmanEchoApiTest {
     @Test
     void shouldPostData() {
         // Given - When - Then
-        // Предусловия
+// Предусловия
         given()
                 .baseUri("https://postman-echo.com")
-                .body("not empty body") // отправляемые данные (заголовки и query можно выставлять аналогично)
-        // Выполняемые действия
+                .body("test data#1") // отправляемые данные (заголовки и query можно выставлять аналогично)
+// Выполняемые действия
                 .when()
                 .post("/post")
-        // Проверки
+// Проверки
                 .then()
-                .statusCode(200)
-                //.body("body",equalTo("not empty body"))
+               .statusCode(200)
+                .body("data",equalTo("test data#1"))
+        .header("Content-Type", "application/json; charset=utf-8")
         ;
     }
 }
