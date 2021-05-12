@@ -21,7 +21,7 @@ public class PostmanEchoApiTest {
                 .then()
                .statusCode(200)
                 .body("data",equalTo("test data#1"))
-        .header("Content-Type", "application/json; charset=utf-8")
+        .header("Content-Type", "application/json; charset=utf-7")
         ;
     }
 }
