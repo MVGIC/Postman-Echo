@@ -20,7 +20,7 @@ public class PostmanEchoApiTest {
 // Проверки
                 .then()
                .statusCode(200)
-                .body("data",equalTo("test data#2"))
+                .body("data",equalTo("test data#1"))
         .header("Content-Type", "application/json; charset=utf-8")
         ;
     }
